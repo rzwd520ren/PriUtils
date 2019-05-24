@@ -16,10 +16,10 @@ public class DateUtil {
         cal.setTime(originTime);
         if (PREIOD_WEEK.equalsIgnoreCase(period)) {
             cal.add(Calendar.WEEK_OF_YEAR, -1);
-            cal.set(Calendar.DAY_OF_WEEK, cal.getFirstDayOfWeek());
+            cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
         } else if (PERIOD_MONTH.equalsIgnoreCase(period)) {
             cal.add(Calendar.MONTH, -1);
-            cal.set(Calendar.DAY_OF_MONTH, 0);
+            cal.set(Calendar.DAY_OF_MONTH, 1);
         } else {
             return null;
         }
@@ -33,7 +33,7 @@ public class DateUtil {
         Calendar cal = Calendar.getInstance();
         cal.setTime(originTime);
         if (PREIOD_WEEK.equalsIgnoreCase(period)) {
-            cal.set(Calendar.DAY_OF_WEEK, cal.getFirstDayOfWeek());
+            cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
             cal.add(Calendar.DAY_OF_MONTH, -1);
         } else if (PERIOD_MONTH.equalsIgnoreCase(period)) {
             cal.add(Calendar.MONTH, -1);
