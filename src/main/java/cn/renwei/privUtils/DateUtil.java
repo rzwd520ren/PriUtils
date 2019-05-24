@@ -1,4 +1,4 @@
-package date;
+package cn.renwei.privUtils;
 
 import java.util.Calendar;
 import java.util.Date;
